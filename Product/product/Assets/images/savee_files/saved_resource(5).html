@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://audigent-gps.ybp.yahoo.com/bid/vzd/adslot/13935/?pa=1&as=AUYH00003 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>
+   <script>
+     (() => {
+        const run = () => {
+
+          const origin = "https://pa.ybp.yahoo.com";
+          const interestGroups = [{
+            name: "3346583",
+            owner: `${origin}`,
+            userBiddingSignals: {},
+            trustedBiddingSignalsUrl: `${origin}/v1/getvalues`,
+            trustedBiddingSignalsKeys: ['3346583'],
+            biddingLogicUrl: `${origin}/opus/tag/gps/bidding-logic.js`,
+            ads: [{
+                renderUrl: "https://pr.ybp.yahoo.com/pr/secure/true/adid/SLPk59Bs8LJIiaBBEbDFJg/pa/1",
+                allowedReportingOrigins: ["https://pn.ybp.yahoo.com"],
+                metadata: {
+                  width: 300,
+                  height: 250,
+                  crid: 6653573,
+                  adomain: ["yahoo.com"],
+                  seat: "47",
+                  ad: 15760871,
+                  line: 3346583
+                }
+              }]
+          }];
+
+          const expiryInSec = 60 * 60 * 24 * 14;
+
+          for (const interestGroup of interestGroups) {
+            navigator.joinAdInterestGroup(interestGroup, expiryInSec);
+          }
+
+        }
+
+        if (document.readyState !== 'loading') {
+          run();
+        } else {
+          document.addEventListener('DOMContentLoaded', run);
+        }
+     })();
+   </script>
+
+
+</body></html>
